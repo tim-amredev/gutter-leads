@@ -1,6 +1,6 @@
 # Site settings
 title: American Gutters - Professional Gutter Installation
-email: info@americangutters.net
+email: info@americanremodeling.net
 description: >-
   Professional gutter installation and repair services. Protect your home with quality gutters installed by experts.
 baseurl: "/gutter-leads" # the subpath of your site
@@ -10,6 +10,14 @@ url: "https://tim-amredev.github.io" # the base hostname & protocol for your sit
 markdown: kramdown
 plugins:
   - jekyll-feed
+
+# Default layout
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      layout: "default"
 
 # Exclude from processing
 exclude:
