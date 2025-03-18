@@ -3,8 +3,8 @@ title: American Remodeling - Professional Gutter Installation
 email: info@americanremodeling.net
 description: >-
   Professional gutter installation and repair services. Protect your home with quality gutters installed by experts.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/gutter-leads" # the subpath of your site
+url: "https://tim-amredev.github.io" # the base hostname & protocol for your site
 
 # Build settings
 markdown: kramdown
