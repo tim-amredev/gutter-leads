@@ -3,7 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ page.title }}</title>
+  <title>{{ page.title }} | Serving PA, NJ, NY & MD</title>
+  <meta name="description" content="{{ page.description | default: site.description }}">
+  <meta name="keywords" content="{{ page.keywords | default: site.keywords }}">
+  <meta name="author" content="American Gutters">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="{{ page.title }} | Serving PA, NJ, NY & MD">
+  <meta property="og:description" content="{{ page.description | default: site.description }}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ site.url }}{{ site.baseurl }}{{ page.url }}">
+  <meta property="og:image" content="{{ site.url }}{{ site.baseurl }}/assets/images/logo.png">
+  <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url }}">
   <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,13 +21,56 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="{{ site.baseurl }}/assets/images/favicon.png">
+  <!-- Schema.org markup for Google -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "American Gutters",
+    "image": "{{ site.url }}{{ site.baseurl }}/assets/images/logo.png",
+    "url": "{{ site.url }}{{ site.baseurl }}/",
+    "telephone": "(555) 123-4567",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "123 Main Street",
+      "addressLocality": "Anytown",
+      "addressRegion": "PA",
+      "postalCode": "12345",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 40.0,
+      "longitude": -75.0
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "08:00",
+        "closes": "18:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Saturday",
+        "opens": "09:00",
+        "closes": "14:00"
+      }
+    ],
+    "sameAs": [
+      "https://www.facebook.com/americangutters",
+      "https://www.instagram.com/americangutters"
+    ],
+    "areaServed": ["PA", "NJ", "NY", "MD"]
+  }
+  </script>
 </head>
 <body>
   <nav class="navbar">
     <div class="container">
       <div class="logo">
         <a href="{{ site.baseurl }}/">
-          <img src="{{ site.baseurl }}/assets/images/logo.png" alt="American Gutters">
+          <img src="{{ site.baseurl }}/assets/images/logo.png" alt="American Gutters Logo - Gutter Services in PA, NJ, NY & MD">
           <span>American Gutters</span>
         </a>
       </div>
@@ -35,13 +88,13 @@
     <div class="container">
       <div class="footer-content">
         <div class="footer-logo">
-          <img src="{{ site.baseurl }}/assets/images/logo.png" alt="American Gutters">
+          <img src="{{ site.baseurl }}/assets/images/logo.png" alt="American Gutters Logo">
           <h3>American Gutters</h3>
           <p>Quality Gutter Solutions Since 1995</p>
         </div>
         <div class="footer-contact">
           <h4>Contact Us</h4>
-          <p><i class="fas fa-map-marker-alt"></i> 123 Main Street, Anytown, USA</p>
+          <p><i class="fas fa-map-marker-alt"></i> 123 Main Street, Anytown, PA</p>
           <p><i class="fas fa-phone-alt"></i> (555) 123-4567</p>
           <p><i class="fas fa-envelope"></i> info@americanremodeling.net</p>
         </div>
@@ -53,8 +106,9 @@
         </div>
         <div class="footer-service">
           <h4>Service Areas</h4>
-          <p>We proudly serve the following areas and surrounding communities:</p>
-          <p>Anytown • Springfield • Riverdale • Lakeside • Hillcrest</p>
+          <p>We proudly serve the following states and surrounding communities:</p>
+          <p>Pennsylvania • New Jersey • New York • Maryland</p>
+          <p>Philadelphia • Trenton • New York City • Baltimore</p>
         </div>
       </div>
       <div class="footer-bottom">
@@ -62,9 +116,11 @@
         <div class="footer-links">
           <a href="{{ site.baseurl }}/privacy-policy">Privacy Policy</a>
           <a href="{{ site.baseurl }}/terms">Terms of Service</a>
+          <a href="{{ site.baseurl }}/sitemap.xml">Sitemap</a>
         </div>
       </div>
     </div>
   </footer>
 </body>
 </html>
+
