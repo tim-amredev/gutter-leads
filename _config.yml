@@ -1,0 +1,22 @@
+# Site settings
+title: American Remodeling - Professional Gutter Installation
+email: info@americanremodeling.net
+description: >-
+  Professional gutter installation and repair services. Protect your home with quality gutters installed by experts.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .git
+  - .github
+
