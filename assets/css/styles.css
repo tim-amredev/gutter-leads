@@ -169,7 +169,7 @@ img {
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/assets/images/hero-bg.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/hero-bg.jpg");
   background-size: cover;
   background-position: center;
   color: white;
@@ -511,6 +511,53 @@ textarea:focus {
   margin-bottom: 0.5rem;
 }
 
+/* Page Content */
+.page-content {
+  padding: 5rem 0;
+  min-height: 70vh;
+}
+
+.page-title {
+  font-size: 2.5rem;
+  color: var(--primary-dark);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.content-block {
+  background-color: white;
+  border-radius: 8px;
+  padding: 2.5rem;
+  box-shadow: var(--box-shadow);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.content-block h2 {
+  color: var(--primary-dark);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.content-block h2:first-child {
+  margin-top: 0;
+}
+
+.content-block p,
+.content-block ul,
+.content-block ol {
+  margin-bottom: 1.5rem;
+}
+
+.content-block ul,
+.content-block ol {
+  padding-left: 1.5rem;
+}
+
+.content-block li {
+  margin-bottom: 0.5rem;
+}
+
 /* Responsive Adjustments */
 @media (max-width: 768px) {
   .hero h1 {
@@ -540,6 +587,10 @@ textarea:focus {
 
   .footer-links a {
     margin: 0 0.75rem;
+  }
+
+  .content-block {
+    padding: 1.5rem;
   }
 }
 
