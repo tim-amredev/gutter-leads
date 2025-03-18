@@ -357,6 +357,46 @@ textarea:focus {
   color: var(--primary-dark);
 }
 
+/* Locations Section */
+.locations {
+  padding: 5rem 0;
+  background-color: var(--light-bg);
+}
+
+.location-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.location-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.location-card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: var(--box-shadow);
+}
+
+.location-card h3 {
+  color: var(--primary-dark);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--secondary-color);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mb-4 {
+  margin-bottom: 1.5rem;
+}
+
 /* Footer */
 .footer {
   background-color: var(--dark-bg);
