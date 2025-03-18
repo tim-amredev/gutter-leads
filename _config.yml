@@ -1,15 +1,17 @@
 # Site settings
-title: American Gutters - Professional Gutter Installation
+title: American Gutters - Professional Gutter Installation in PA, NJ, NY & MD
 email: info@americanremodeling.net
 description: >-
-  Professional gutter installation and repair services. Protect your home with quality gutters installed by experts.
+  Professional gutter installation and repair services in Pennsylvania, New Jersey, New York, and Maryland. Protect your home with quality gutters installed by experts.
 baseurl: "/gutter-leads" # the subpath of your site
 url: "https://tim-amredev.github.io" # the base hostname & protocol for your site
+keywords: gutters, gutter installation, gutter repair, gutter guards, seamless gutters, Pennsylvania, New Jersey, New York, Maryland, PA, NJ, NY, MD
 
 # Build settings
 markdown: kramdown
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
 
 # Default layout
 defaults:
