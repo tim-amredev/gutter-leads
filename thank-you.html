@@ -1,18 +1,20 @@
 ---
 layout: default
-title: Thank You - American Gutters
+title: Thank You for Your Gutter Quote Request
+description: Thank you for requesting a quote for gutter services in PA, NJ, NY, or MD. We'll contact you shortly with your personalized estimate.
+keywords: gutter quote, thank you, estimate, Pennsylvania, New Jersey, New York, Maryland
 ---
 
 <section class="thank-you-section">
   <div class="container">
     <div class="thank-you-content">
       <h1>Thank You for Your Request!</h1>
-      <p class="lead">We've received your information and will contact you shortly to discuss your gutter project.</p>
+      <p class="lead">We've received your information and will contact you shortly to discuss your gutter project in the Northeast region.</p>
       
       <div class="estimate-box">
         <h2>Your Estimated Price Range</h2>
         <div id="price-estimate" class="price">Calculating...</div>
-        <p class="estimate-note">This is a preliminary estimate based on the information provided. Your final quote may vary based on a detailed assessment of your property.</p>
+        <p class="estimate-note">This is a preliminary estimate based on the information provided. Your final quote may vary based on a detailed assessment of your property and specific location in PA, NJ, NY, or MD.</p>
       </div>
       
       <div class="next-steps">
@@ -38,65 +40,78 @@ title: Thank You - American Gutters
 </section>
 
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    // Retrieve form data from localStorage
-    const formDataString = localStorage.getItem('gutterFormData');
-    
-    if (formDataString) {
-      const formData = JSON.parse(formDataString);
-      
-      // Calculate estimate based on form data
-      const estimate = calculateEstimate(formData);
-      
-      // Display estimate
-      document.getElementById('price-estimate').textContent = estimate;
-      
-      // Clear localStorage
-      localStorage.removeItem('gutterFormData');
-    } else {
-      document.getElementById('price-estimate').textContent = 'Unable to calculate estimate';
-    }
-  });
+document.addEventListener('DOMContentLoaded', function() {
+  // Retrieve form data from localStorage
+  const formDataString = localStorage.getItem('gutterFormData');
   
-  function calculateEstimate(formData) {
-    // Base rates per linear foot (industry standard pricing)
-    const baseRates = {
-      'Aluminum': 7,
-      'Copper': 25,
-      'Steel': 10,
-      'Vinyl': 5,
-      'Not Sure': 7,
-      '': 7 // Default to aluminum rate if not specified
-    };
+  if (formDataString) {
+    const formData = JSON.parse(formDataString);
     
-    // Get base rate for selected gutter type
-    const baseRate = baseRates[formData.gutterType];
+    // Calculate estimate based on form data
+    const estimate = calculateEstimate(formData);
     
-    // Calculate base price
-    let basePrice = baseRate * formData.houseLength;
+    // Display estimate
+    document.getElementById('price-estimate').textContent = estimate;
     
-    // Adjust for number of stories
-    const storyMultiplier = formData.stories === '1' ? 1 : 
-                           formData.stories === '2' ? 1.3 : 1.5;
-    
-    // Adjust for service type
-    let serviceMultiplier = 1;
-    if (formData.service === 'Gutter Repair') {
-      serviceMultiplier = 0.5;
-    } else if (formData.service === 'Gutter Guards') {
-      serviceMultiplier = 0.8;
-    } else if (formData.service === 'Downspouts') {
-      serviceMultiplier = 0.4;
-    }
-    
-    // Calculate final price
-    const finalPrice = basePrice * storyMultiplier * serviceMultiplier;
-    
-    // Add 20% range for estimate
-    const lowerEstimate = Math.round(finalPrice * 0.9);
-    const upperEstimate = Math.round(finalPrice * 1.1);
-    
-    return `$${lowerEstimate} - $${upperEstimate}`;
+    // Clear localStorage
+    localStorage.removeItem('gutterFormData');
+  } else {
+    document.getElementById('price-estimate').textContent = 'Unable to calculate estimate';
   }
+});
+
+function calculateEstimate(formData) {
+  // Base rates per linear foot (industry standard pricing)
+  const baseRates = {
+    'Aluminum': 7,
+    'Copper': 25,
+    'Steel': 10,
+    'Vinyl': 5,
+    'Not Sure': 7,
+    '': 7 // Default to aluminum rate if not specified
+  };
+  
+  // Get base rate for selected gutter type
+  const baseRate = baseRates[formData.gutterType];
+  
+  // Calculate base price
+  let basePrice = baseRate * formData.houseLength;
+  
+  // Adjust for number of stories
+  const storyMultiplier = formData.stories === '1' ? 1 : 
+                         formData.stories === '2' ? 1.3 : 1.5;
+  
+  // Adjust for service type
+  let serviceMultiplier = 1;
+  if (formData.service === 'Gutter Repair') {
+    serviceMultiplier = 0.5;
+  } else if (formData.service === 'Gutter Guards') {
+    serviceMultiplier = 0.8;
+  } else if (formData.service === 'Downspouts') {
+    serviceMultiplier = 0.4;
+  }
+  
+  // Adjust for location/state if available
+  let locationMultiplier = 1;
+  if (formData.state) {
+    if (formData.state === 'NY') {
+      locationMultiplier = 1.15; // Higher costs in NY
+    } else if (formData.state === 'NJ') {
+      locationMultiplier = 1.1; // Higher costs in NJ
+    } else if (formData.state === 'PA') {
+      locationMultiplier = 1.05; // Moderate costs in PA
+    }
+    // MD uses the default multiplier
+  }
+  
+  // Calculate final price
+  const finalPrice = basePrice * storyMultiplier * serviceMultiplier * locationMultiplier;
+  
+  // Add 20% range for estimate
+  const lowerEstimate = Math.round(finalPrice * 0.9);
+  const upperEstimate = Math.round(finalPrice * 1.1);
+  
+  return `$${lowerEstimate} - $${upperEstimate}`;
+}
 </script>
 
