@@ -8,4 +8,5 @@ Replace these placeholder references with actual images:
 4. `/assets/images/gutter-guards.jpg` - Image of gutter guards
 5. `/assets/images/gutter-repair.jpg` - Image of gutter repair
 6. `/assets/images/downspout-installation.jpg` - Image of downspout installation
+7. `/assets/images/favicon.png` - Favicon for the website
 
