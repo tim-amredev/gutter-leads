@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tim-amredev.github.io/gutter-leads/sitemap.xml
+
