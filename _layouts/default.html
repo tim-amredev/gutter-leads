@@ -4,18 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ page.title }}</title>
-  <link rel="stylesheet" href="/assets/css/styles.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="{{ site.baseurl }}/assets/images/favicon.png">
 </head>
 <body>
   <nav class="navbar">
     <div class="container">
       <div class="logo">
-        <a href="/">
-          <img src="/assets/images/logo.png" alt="American Remodeling">
+        <a href="{{ site.baseurl }}/">
+          <img src="{{ site.baseurl }}/assets/images/logo.png" alt="American Remodeling">
           <span>American Remodeling</span>
         </a>
       </div>
@@ -33,7 +35,7 @@
     <div class="container">
       <div class="footer-content">
         <div class="footer-logo">
-          <img src="/assets/images/logo.png" alt="American Remodeling">
+          <img src="{{ site.baseurl }}/assets/images/logo.png" alt="American Remodeling">
           <h3>American Remodeling</h3>
           <p>Quality Gutter Solutions Since 1995</p>
         </div>
@@ -58,8 +60,8 @@
       <div class="footer-bottom">
         <p>&copy; 2023 American Remodeling. All Rights Reserved.</p>
         <div class="footer-links">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Service</a>
+          <a href="{{ site.baseurl }}/privacy-policy">Privacy Policy</a>
+          <a href="{{ site.baseurl }}/terms">Terms of Service</a>
         </div>
       </div>
     </div>
