@@ -1,0 +1,398 @@
+---
+layout: default
+title: Gutter Replacement Cost Estimator
+description: Calculate the cost of your gutter replacement project in PA, NJ, NY & MD. Get an instant estimate based on your specific requirements.
+keywords: gutter cost calculator, gutter estimate, gutter pricing, gutter replacement cost, PA, NJ, NY, MD
+---
+
+<section class="page-content">
+  <div class="container">
+    <h1 class="page-title">Gutter Replacement Cost Estimator</h1>
+    
+    <div class="content-block">
+      <p class="lead text-center mb-4">Use our interactive calculator to estimate the cost of your gutter replacement project. Enter your specific requirements below to get an instant price range.</p>
+      
+      <div class="calculator-container">
+        <form id="gutter-calculator" class="calculator-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="house_perimeter">House Perimeter (feet)*</label>
+              <input type="number" id="house_perimeter" min="10" max="1000" value="100" required>
+            </div>
+            <div class="form-group">
+              <label for="material">Gutter Material*</label>
+              <select id="material" required>
+                <option value="aluminum">Aluminum</option>
+                <option value="copper">Copper</option>
+                <option value="steel">Steel</option>
+                <option value="vinyl">Vinyl</option>
+              </select>
+            </div>
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label for="stories">Number of Stories*</label>
+              <select id="stories" required>
+                <option value="1">1 Story</option>
+                <option value="2">2 Stories</option>
+                <option value="3">3+ Stories</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="gutter_size">Gutter Size*</label>
+              <select id="gutter_size" required>
+                <option value="5">5-inch (Standard)</option>
+                <option value="6">6-inch (Oversized)</option>
+              </select>
+            </div>
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label for="downspouts">Number of Downspouts*</label>
+              <input type="number" id="downspouts" min="1" max="20" value="4" required>
+            </div>
+            <div class="form-group">
+              <label for="roof_pitch">Roof Pitch*</label>
+              <select id="roof_pitch" required>
+                <option value="low">Low (3/12 or less)</option>
+                <option value="medium" selected>Medium (4/12 to 8/12)</option>
+                <option value="steep">Steep (9/12 or greater)</option>
+              </select>
+            </div>
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label for="corners">Number of Corners*</label>
+              <input type="number" id="corners" min="4" max="20" value="4" required>
+            </div>
+            <div class="form-group">
+              <label for="state">State*</label>
+              <select id="state" required>
+                <option value="PA">Pennsylvania (PA)</option>
+                <option value="NJ">New Jersey (NJ)</option>
+                <option value="NY">New York (NY)</option>
+                <option value="MD">Maryland (MD)</option>
+              </select>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label>Additional Features</label>
+            <div class="checkbox-group">
+              <label class="checkbox-label">
+                <input type="checkbox" id="gutter_guards"> Gutter Guards
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" id="gutter_screens"> Gutter Screens
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" id="heat_tape"> Heat Tape
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" id="old_gutter_removal"> Old Gutter Removal
+              </label>
+            </div>
+          </div>
+          
+          <div class="form-group text-center">
+            <button type="button" id="calculate-btn" class="btn btn-primary">Calculate Estimate</button>
+          </div>
+        </form>
+        
+        <div id="estimate-result" class="estimate-result">
+          <h2>Your Estimated Price Range</h2>
+          <div class="price-range">
+            <span id="price-low">$0</span> - <span id="price-high">$0</span>
+          </div>
+          <p class="estimate-note">This is a preliminary estimate based on the information provided. Your final quote may vary based on a detailed assessment of your property.</p>
+          
+          <div class="estimate-details">
+            <h3>Estimate Breakdown</h3>
+            <div id="estimate-breakdown" class="breakdown-list">
+              <!-- Breakdown items will be inserted here by JavaScript -->
+            </div>
+          </div>
+          
+          <div class="cta-container">
+            <p>Ready for an exact quote? Get a professional assessment!</p>
+            <a href="#quote-form" class="btn btn-secondary scroll-to-form">Get a Professional Quote</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="quote-form" class="quote-section">
+  <div class="container">
+    <div class="form-container">
+      <h2 class="section-title">Get Your Free Gutter Quote</h2>
+      <p class="form-intro">Fill out the form below and we'll provide you with a free estimate for your gutter project in PA, NJ, NY, or MD.</p>
+      
+      <form action="https://formsubmit.co/leads@americanremodeling.net" method="POST" id="gutter-form">
+        <!-- FormSubmit configuration -->
+        <input type="hidden" name="_captcha" value="true">
+        <input type="hidden" name="_subject" value="New Gutter Lead from Cost Estimator">
+        <input type="hidden" name="_next" value="https://tim-amredev.github.io/gutter-leads/thank-you.html">
+        <input type="hidden" name="_template" value="table">
+        
+        <div class="form-group">
+          <label for="name">Full Name*</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">Email Address*</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number*</label>
+            <input type="tel" id="phone" name="phone" required>
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label for="address">Property Address*</label>
+          <input type="text" id="address" name="address" required>
+        </div>
+        
+        <div class="form-row">
+          <div class="form-group">
+            <label for="city">City*</label>
+            <input type="text" id="city" name="city" required>
+          </div>
+          <div class="form-group">
+            <label for="quote-state">State*</label>
+            <select id="quote-state" name="state" required>
+              <option value="">Select State</option>
+              <option value="PA">Pennsylvania (PA)</option>
+              <option value="NJ">New Jersey (NJ)</option>
+              <option value="NY">New York (NY)</option>
+              <option value="MD">Maryland (MD)</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="zip">Zip Code*</label>
+            <input type="text" id="zip" name="zip" required>
+          </div>
+        </div>
+        
+        <!-- Hidden fields to pass calculator data -->
+        <input type="hidden" id="estimated_price_range" name="estimated_price_range">
+        <input type="hidden" id="house_perimeter_value" name="house_perimeter">
+        <input type="hidden" id="material_value" name="material">
+        <input type="hidden" id="stories_value" name="stories">
+        <input type="hidden" id="gutter_size_value" name="gutter_size">
+        
+        <div class="form-group">
+          <label for="timeline">Project Timeline*</label>
+          <select id="timeline" name="timeline" required>
+            <option value="">Select</option>
+            <option value="Immediate">As Soon As Possible</option>
+            <option value="1-2 Weeks">1-2 Weeks</option>
+            <option value="1 Month">Within a Month</option>
+            <option value="Planning">Just Planning</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="message">Additional Information</label>
+          <textarea id="message" name="message" rows="4"></textarea>
+        </div>
+        
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary btn-block">Get My Free Quote</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const calculateBtn = document.getElementById('calculate-btn');
+  const estimateResult = document.getElementById('estimate-result');
+  const scrollToFormBtn = document.querySelector('.scroll-to-form');
+  
+  // Initially hide the estimate result
+  estimateResult.style.display = 'none';
+  
+  // Calculate button click handler
+  calculateBtn.addEventListener('click', function() {
+    // Get all input values
+    const housePerimeter = parseFloat(document.getElementById('house_perimeter').value);
+    const material = document.getElementById('material').value;
+    const stories = document.getElementById('stories').value;
+    const gutterSize = document.getElementById('gutter_size').value;
+    const downspouts = parseInt(document.getElementById('downspouts').value);
+    const roofPitch = document.getElementById('roof_pitch').value;
+    const corners = parseInt(document.getElementById('corners').value);
+    const state = document.getElementById('state').value;
+    
+    // Get checkbox values
+    const gutterGuards = document.getElementById('gutter_guards').checked;
+    const gutterScreens = document.getElementById('gutter_screens').checked;
+    const heatTape = document.getElementById('heat_tape').checked;
+    const oldGutterRemoval = document.getElementById('old_gutter_removal').checked;
+    
+    // Calculate the estimate
+    const estimate = calculateGutterEstimate(
+      housePerimeter,
+      material,
+      stories,
+      gutterSize,
+      downspouts,
+      roofPitch,
+      corners,
+      state,
+      gutterGuards,
+      gutterScreens,
+      heatTape,
+      oldGutterRemoval
+    );
+    
+    // Display the estimate
+    document.getElementById('price-low').textContent = `$${estimate.lowEstimate}`;
+    document.getElementById('price-high').textContent = `$${estimate.highEstimate}`;
+    
+    // Generate and display the breakdown
+    const breakdownElement = document.getElementById('estimate-breakdown');
+    breakdownElement.innerHTML = '';
+    
+    for (const [key, value] of Object.entries(estimate.breakdown)) {
+      const item = document.createElement('div');
+      item.className = 'breakdown-item';
+      item.innerHTML = `<span class="breakdown-label">${key}:</span> <span class="breakdown-value">$${value}</span>`;
+      breakdownElement.appendChild(item);
+    }
+    
+    // Show the estimate result
+    estimateResult.style.display = 'block';
+    
+    // Smooth scroll to the estimate result
+    estimateResult.scrollIntoView({ behavior: 'smooth' });
+    
+    // Update hidden form fields
+    document.getElementById('estimated_price_range').value = `$${estimate.lowEstimate} - $${estimate.highEstimate}`;
+    document.getElementById('house_perimeter_value').value = housePerimeter;
+    document.getElementById('material_value').value = material;
+    document.getElementById('stories_value').value = stories;
+    document.getElementById('gutter_size_value').value = gutterSize;
+  });
+  
+  // Scroll to form button click handler
+  if (scrollToFormBtn) {
+    scrollToFormBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      const formElement = document.getElementById('quote-form');
+      formElement.scrollIntoView({ behavior: 'smooth' });
+    });
+  }
+  
+  // Function to calculate gutter estimate
+  function calculateGutterEstimate(
+    housePerimeter,
+    material,
+    stories,
+    gutterSize,
+    downspouts,
+    roofPitch,
+    corners,
+    state,
+    gutterGuards,
+    gutterScreens,
+    heatTape,
+    oldGutterRemoval
+  ) {
+    // Base rates per linear foot by material
+    const baseRates = {
+      'aluminum': 7.50,
+      'copper': 25.00,
+      'steel': 10.00,
+      'vinyl': 5.00
+    };
+    
+    // Base rate for selected material
+    const baseRate = baseRates[material];
+    
+    // Calculate base gutter cost
+    let gutterCost = baseRate * housePerimeter;
+    
+    // Adjust for gutter size
+    const gutterSizeMultiplier = gutterSize === '5' ? 1 : 1.25;
+    gutterCost *= gutterSizeMultiplier;
+    
+    // Calculate downspout cost
+    const downspoutCost = downspouts * (stories === '1' ? 50 : stories === '2' ? 75 : 100);
+    
+    // Calculate corner cost
+    const cornerCost = corners * (material === 'copper' ? 25 : 15);
+    
+    // Calculate additional features cost
+    let additionalCost = 0;
+    
+    if (gutterGuards) {
+      additionalCost += housePerimeter * 6; // $6 per foot for gutter guards
+    }
+    
+    if (gutterScreens) {
+      additionalCost += housePerimeter * 3; // $3 per foot for gutter screens
+    }
+    
+    if (heatTape) {
+      additionalCost += housePerimeter * 8; // $8 per foot for heat tape
+    }
+    
+    if (oldGutterRemoval) {
+      additionalCost += housePerimeter * 2; // $2 per foot for removal
+    }
+    
+    // Adjust for number of stories
+    const storyMultiplier = stories === '1' ? 1 : stories === '2' ? 1.3 : 1.6;
+    
+    // Adjust for roof pitch
+    const pitchMultiplier = roofPitch === 'low' ? 1 : roofPitch === 'medium' ? 1.1 : 1.25;
+    
+    // Adjust for location/state
+    let locationMultiplier = 1;
+    if (state === 'NY') {
+      locationMultiplier = 1.15; // Higher costs in NY
+    } else if (state === 'NJ') {
+      locationMultiplier = 1.1; // Higher costs in NJ
+    } else if (state === 'PA') {
+      locationMultiplier = 1.05; // Moderate costs in PA
+    }
+    // MD uses the default multiplier
+    
+    // Calculate labor cost (based on all factors)
+    const laborCost = (gutterCost * 0.6) * storyMultiplier * pitchMultiplier * locationMultiplier;
+    
+    // Calculate total cost
+    const totalCost = gutterCost + downspoutCost + cornerCost + additionalCost + laborCost;
+    
+    // Create breakdown
+    const breakdown = {
+      'Gutters': Math.round(gutterCost),
+      'Downspouts': Math.round(downspoutCost),
+      'Corners': Math.round(cornerCost),
+      'Additional Features': Math.round(additionalCost),
+      'Labor': Math.round(laborCost)
+    };
+    
+    // Calculate low and high estimates (±10%)
+    const lowEstimate = Math.round(totalCost * 0.9);
+    const highEstimate = Math.round(totalCost * 1.1);
+    
+    return {
+      lowEstimate,
+      highEstimate,
+      breakdown
+    };
+  }
+});
+</script>
