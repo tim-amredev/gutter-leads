@@ -509,18 +509,6 @@ textarea:focus {
   margin-bottom: 2.5rem;
 }
 
-.estimate-box h2 {
-  color: var(--primary-dark);
-  margin-bottom: 1rem;
-}
-
-.price {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: var(--primary-color);
-  margin-bottom: 1rem;
-}
-
 .estimate-note {
   font-size: 0.875rem;
   color: var(--light-text);
@@ -598,6 +586,91 @@ textarea:focus {
   margin-bottom: 0.5rem;
 }
 
+/* Calculator Styles */
+.calculator-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.calculator-form {
+  background-color: var(--light-bg);
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: var(--box-shadow);
+}
+
+.checkbox-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: auto;
+  margin-right: 0.5rem;
+}
+
+.estimate-result {
+  background-color: white;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: var(--box-shadow);
+  text-align: center;
+}
+
+.price-range {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin: 1.5rem 0;
+}
+
+.estimate-details {
+  margin: 2rem 0;
+  text-align: left;
+}
+
+.breakdown-list {
+  background-color: var(--light-bg);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-top: 1rem;
+}
+
+.breakdown-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.breakdown-item:last-child {
+  border-bottom: none;
+}
+
+.breakdown-label {
+  font-weight: 600;
+}
+
+.cta-container {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.cta-container p {
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
 /* Responsive Adjustments */
 @media (max-width: 768px) {
   .hero h1 {
@@ -632,6 +705,18 @@ textarea:focus {
   .content-block {
     padding: 1.5rem;
   }
+  
+  .calculator-form {
+    padding: 1.5rem;
+  }
+  
+  .estimate-result {
+    padding: 1.5rem;
+  }
+  
+  .price-range {
+    font-size: 2rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -654,5 +739,8 @@ textarea:focus {
   .price {
     font-size: 2rem;
   }
+  
+  .checkbox-group {
+    grid-template-columns: 1fr;
+  }
 }
-
